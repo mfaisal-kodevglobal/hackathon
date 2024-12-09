@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Header css start*/
+.logo{
+    margin-left: 50px;
+}
+/*Header css end*/
+
+/*VMenu css start*/
+    .vmenu{
+        padding-left: 60px;
+    }
+/*VMenu css end*/
