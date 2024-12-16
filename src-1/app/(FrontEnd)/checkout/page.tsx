@@ -1,135 +1,190 @@
 export default function Checkout() {
   return (
     <>
-      <div className="font-[sans-serif] bg-white">
-      <div className="flex max-sm:flex-col gap-12 max-lg:gap-4 h-full">
-        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 sm:h-screen sm:sticky sm:top-0 lg:min-w-[370px] sm:min-w-[300px]">
-          <div className="relative h-full">
-            <div className="px-4 py-8 sm:overflow-auto sm:h-[calc(100vh-60px)]">
-              <div className="space-y-4">
+      <div className="container mx-auto px-8">
+        <div className="mt-10 font-[sans-serif] bg-white">
+        <div className="mb-6 text-[#1D3178]">
+            <h3 className="text-lg font-bold">Hekto Demo</h3>
+            <p className="text-sm ">Cart / Information / Shipping / Payment</p>
+        </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-3 shrink-0 bg-gray-300 rounded-md">
-                    <img src='https://readymadeui.com/images/product10.webp' className="w-full object-contain" />
-                  </div>
-                  <div className="w-full">
-                    <h3 className="text-base text-white">Split Sneakers</h3>
-                    <ul className="text-xs text-gray-300 space-y-2 mt-2">
-                      <li className="flex flex-wrap gap-4">Size <span className="ml-auto">37</span></li>
-                      <li className="flex flex-wrap gap-4">Quantity <span className="ml-auto">2</span></li>
-                      <li className="flex flex-wrap gap-4">Total Price <span className="ml-auto">$40</span></li>
-                    </ul>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-2">
+            
+            {/* Left Section - Contact and Shipping Details */}
+            <div className="h-max rounded-md p-8 bg-[#F8F8FD]">
+              {/* Contact Information */}
+              <div className="mb-10">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl font-bold text-[#1D3178]">
+                    Contact Information
+                  </h2>
+                  <a href="#" className="text-blue-600 hover:underline text-sm">
+                    Already have an account? Login
+                  </a>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-3 shrink-0 bg-gray-300 rounded-md">
-                    <img src='https://readymadeui.com/images/product11.webp' className="w-full object-contain" />
-                  </div>
-                  <div className="w-full">
-                    <h3 className="text-base text-white">Velvet Boots</h3>
-                    <ul className="text-xs text-gray-300 space-y-2 mt-2">
-                      <li>Size <span className="float-right">37</span></li>
-                      <li>Quantity <span className="float-right">2</span></li>
-                      <li>Total Price <span className="float-right">$40</span></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-3 shrink-0 bg-gray-300 rounded-md">
-                    <img src='https://readymadeui.com/images/product14.webp' className="w-full object-contain" />
-                  </div>
-                  <div className="w-full">
-                    <h3 className="text-base text-white">Echo Elegance</h3>
-                    <ul className="text-xs text-gray-300 space-y-2 mt-2">
-                      <li>Size <span className="float-right">37</span></li>
-                      <li>Quantity <span className="float-right">2</span></li>
-                      <li>Total Price <span className="float-right">$40</span></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-3 shrink-0 bg-gray-300 rounded-md">
-                    <img src='https://readymadeui.com/images/product13.webp' className="w-full object-contain" />
-                  </div>
-                  <div className="w-full">
-                    <h3 className="text-base text-white">Pumps</h3>
-                    <ul className="text-xs text-gray-300 space-y-2 mt-2">
-                      <li>Size <span className="float-right">37</span></li>
-                      <li>Quantity <span className="float-right">2</span></li>
-                      <li>Total Price <span className="float-right">$40</span></li>
-                    </ul>
+                <div className="mt-4">
+                  <input
+                    type="text"
+                    placeholder="Email or Mobile Phone Number"
+                    className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                    aria-label="Email or Mobile Phone Number"
+                  />
+                  <div className="flex items-center mt-3">
+                    <input
+                      type="checkbox"
+                      className="text-blue-600"
+                      id="newsletter"
+                    />
+                    <label
+                      htmlFor="newsletter"
+                      className="text-gray-600 ml-2 text-sm"
+                    >
+                      Keep me up to date on news and exclusive offers.
+                    </label>
                   </div>
                 </div>
               </div>
+
+              {/* Shipping Details */}
+              <div>
+                <h2 className="text-2xl font-bold text-[#1D3178]">
+                  Shipping Details
+                </h2>
+                <form className="mt-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="First Name"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="Last Name"
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="Address"
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <input
+                      type="text"
+                      placeholder="Apartment, Floor, etc. (optional)"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="Apartment details"
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <input
+                      type="text"
+                      placeholder="City"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="City"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Postal Code"
+                      className="border-b-2 border-gray-400 px-3 py-2 bg-[#F8F8FD] focus:bg-transparent text-gray-800 w-full text-sm focus:outline-none"
+                      aria-label="Postal Code"
+                    />
+                  </div>
+                  <div className="mt-8 flex justify-between">
+                    <button
+                      type="button"
+                      className="px-4 py-2 border rounded text-white bg-[#FB2E86] hover:bg-[#FB2E86]/90"
+                    >
+                      Continue Shopping
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
 
-            <div className="md:absolute md:left-0 md:bottom-0 bg-gray-800 w-full p-4">
-              <h4 className="flex flex-wrap gap-4 text-base text-white">Total <span className="ml-auto">$84.00</span></h4>
+            {/* Right Section - Order Summary */}
+            <div className="text-white lg:min-w-[470px] sm:min-w-[300px]">
+              <div className="px-4">
+               
+                <div className="space-y-4">
+                  {/* Product Items */}
+                  {[1, 2, 3, 4, 5].map((product) => (
+                    <div
+                      key={product}
+                      className="flex items-start gap-4  p-4 border-b-2"
+                    >
+                      <img
+                        src={`img/checkout${product}.png`}
+                        alt={`Product ${product}`}
+                        className="w-16 h-16 object-contain bg-[#F4F4FC]"
+                      />
+                      <div className="flex-grow">
+                        <h3 className="text-black font-semibold">
+                         Ut diam consequat
+                        </h3>
+                        <div className="flex flex-wrap justify-between items-center">
+                          <div>
+                            <p className="text-gray-600 text-sm">
+                              Color: Brown
+                            </p>
+                            <p className="text-gray-600 text-sm">Size: XL</p>
+                          </div>
+                          <p className="text-gray-600 text-sm">$32.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Pricing Breakdown */}
+                  <div className="mb-6">
+                   
+                   
+                    <div className="bg-[#F4F4FC] mb-6 p-4 rounded-md">
+                      <ul className="divide-y text-gray-600 bg-[#F4F4FC]">
+                        <li className="flex justify-between py-3 text-[#1D3178]">
+                          <span className="font-bold text-[#15245E]">Subtotal</span>
+                          <span className="font-bold text-[#15245E]">
+                            $160.00
+                          </span>
+                        </li>
+                        <li className="flex justify-between py-3 font-bold">
+                          <span className="font-bold text-[#15245E]">Total</span>
+                          <span>$160.00</span>
+                        </li>
+                      </ul>
+                      <div className="flex items-center mt-3">
+                    <input
+                      type="checkbox"
+                      className="text-[#19D16F] bg-[#19D16F]"
+                      id="newsletter"
+                    />
+                    <label
+                      htmlFor="newsletter"
+                      className="text-gray-600 ml-2 text-sm"
+                    >
+                      Shipping and text calculated at checkout.
+                    </label>
+                  </div>
+                      <button className="w-full mt-6 py-2 bg-[#19D16F] text-white font-semibold rounded hover:bg-green-700">
+                        Proceed to Checkout
+                      </button>
+                    </div>
+                  </div>
+
+                  
+
+                
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="max-w-4xl w-full h-max rounded-md px-4 py-8 sticky top-0">
-          <h2 className="text-2xl font-bold text-gray-800">Complete your order</h2>
-          <form className="mt-8">
-            <div>
-              <h3 className="text-base text-gray-800 mb-4">Personal Details</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <input type="text" placeholder="First Name"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-
-                <div>
-                  <input type="text" placeholder="Last Name"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-
-                <div>
-                  <input type="email" placeholder="Email"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-
-                <div>
-                  <input type="number" placeholder="Phone No."
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-base text-gray-800 mb-4">Shipping Address</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <input type="text" placeholder="Address Line"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-                <div>
-                  <input type="text" placeholder="City"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-                <div>
-                  <input type="text" placeholder="State"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-                <div>
-                  <input type="text" placeholder="Zip Code"
-                    className="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
-                </div>
-              </div>
-
-              <div className="flex gap-4 max-md:flex-col mt-8">
-                <button type="button" className="rounded-md px-6 py-3 w-full text-sm tracking-wide bg-transparent hover:bg-gray-100 border border-gray-300 text-gray-800 max-md:order-1">Cancel</button>
-                <button type="button" className="rounded-md px-6 py-3 w-full text-sm tracking-wide bg-blue-600 hover:bg-blue-700 text-white">Complete Purchase</button>
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
